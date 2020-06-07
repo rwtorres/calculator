@@ -11,14 +11,18 @@
   </head>
 
   <body>
+    <div id="top-layer">
+    <div id="top-layer-header"></div>
     <div id="calculator-container">
-      <div id="buffer-displayer">
-        <p id="buffer-content">0</p>
+      <div id="screen">
+        <p id="display">0</p>
       </div>
+      <div id="middle-layer"></div>
       <div id="buttons-container">
         <div class="row" id="row1">
-          <button class="button double-button" id="clear">C</button>
-          <button class="button" id="remain">%</button>
+          <button class="button clear-button" id="clear">CLR</button>
+          <button class="button clear-button" id="delete">DEL</button>
+          <button class="button operator-button" id="remain">mod</button>
           <button class="button operator-button" id="divide">/</button>
         </div>
         <div class="row" id="row2">
@@ -45,6 +49,7 @@
           <button class="button operator-button" id="equals">=</button>
         </div>
       </div>
+    </div>
     </div>
   </body>
 </html>
