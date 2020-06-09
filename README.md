@@ -1,4 +1,4 @@
-## Simple Calculator
+## Web Calculator
 
 ![Web Calculator](images/preview.png)
 
