@@ -93,11 +93,9 @@ body {
 
 .operator-button {
   background-color: #626262;
-/*  background-color: #cc8500; */
 }
 
 .operator-button:hover, .operator-buton:focus {
-/*  background-color: #ffa500; */
   background-color: #737373;
 }
 

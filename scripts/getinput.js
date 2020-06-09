@@ -70,7 +70,7 @@ function getInput() {
   document.addEventListener("keydown", event => {
     if (event.key === "*") {
       document.getElementById("multiply").focus();
-      insertOperator("x");
+      insertOperator("×");
     }
   });
   document.addEventListener("keyup", event => {
@@ -78,7 +78,7 @@ function getInput() {
   });
 
   document.getElementById("multiply").onclick = () => {
-    insertOperator("x");
+    insertOperator("×");
     document.getElementById("multiply").blur();
   }
 
@@ -86,7 +86,7 @@ function getInput() {
   document.addEventListener("keydown", event => {
     if (event.key === "/") {
       document.getElementById("divide").focus();
-      insertOperator("/");
+      insertOperator("÷");
     }
   });
   document.addEventListener("keyup", event => {
@@ -94,7 +94,7 @@ function getInput() {
   });
 
   document.getElementById("divide").onclick = () => {
-    insertOperator("/");
+    insertOperator("÷");
     document.getElementById("divide").blur();
   }
 

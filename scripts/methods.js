@@ -72,7 +72,7 @@ function deleteChar() {
 
 // Evaluate the display contents and show the results.
 function operate() {
-   let buffer = [];
+  const buffer = [];
 
   for (let i = 0, j = 0; j < display.textContent.length; j++) {
     if (typeof(buffer[i]) !== "string") buffer[i] = "";
@@ -99,11 +99,11 @@ function operate() {
           i++;
         }
       }
-    } else if (display.textContent[j] === "x") {
-      buffer[++i] = "x";
+    } else if (display.textContent[j] === "×") {
+      buffer[++i] = "×";
       i++;
-    } else if (display.textContent[j] === "/") {
-      buffer[++i] = "/";
+    } else if (display.textContent[j] === "÷") {
+      buffer[++i] = "÷";
       i++;
     } else if (display.textContent[j] === "m") {
       buffer[++i] = "mod";
@@ -112,17 +112,17 @@ function operate() {
     }
   }
   for (let i = 0; i < buffer.length; i++) {
-    if (buffer[i] === "x") {
+    if (buffer[i] === "×") {
       buffer[i] = Number(buffer[i-1]) * Number(buffer[i+1]);
       buffer.splice(i+1, 1);
       buffer.splice(i-1, 1);
       i = 0;
-    } else if (buffer[i] === "/" || buffer[i] === "mod") {
+    } else if (buffer[i] === "÷" || buffer[i] === "mod") {
       if (errorCheck.checkForInfinity(buffer, i)) {
         display.textContent = errorCheck.checkForInfinity(buffer, i);
         return;
       }
-      if (buffer[i] === "/") {
+      if (buffer[i] === "÷") {
         buffer[i] = Number(buffer[i-1]) / Number(buffer[i+1]);
         buffer.splice(i+1, 1);
         buffer.splice(i-1, 1);
@@ -155,7 +155,7 @@ function operate() {
     display.textContent = errorCheck.checkForInfinity(buffer, 0);
   } else {
     if (String(buffer[0]).length > 14) {
-      display.textContent = buffer[0].toPrecision(14);
+      display.textContent = Number(buffer[0]).toPrecision(14);
     } else {
       display.textContent = buffer[0];
     }

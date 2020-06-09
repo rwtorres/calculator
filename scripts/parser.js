@@ -33,7 +33,7 @@ const errorCheck = {
 // Check the display contents.
 const contentCheck = {
   isOperator: function(char) {
-  const operators = ["x", "/", "=", "m", "d", "mod"];
+  const operators = ["×", "÷", "=", "m", "d", "mod"];
 
   for (let i = 0; i < operators.length; i++) {
     if (char === operators[i]) {
