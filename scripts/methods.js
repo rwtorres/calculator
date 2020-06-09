@@ -131,6 +131,10 @@ function operate() {
         buffer.splice(i-1, 1);
         i = 0;
       } else if (buffer[i] === "mod") {
+        if (errorCheck.checkForFloat(buffer, i)) {
+          display.textContent = errorCheck.checkForFloat(buffer, i);
+          return;
+        }
         buffer[i] = Number(buffer[i-1]) % Number(buffer[i+1]);
         buffer.splice(i+1, 1);
         buffer.splice(i-1, 1);

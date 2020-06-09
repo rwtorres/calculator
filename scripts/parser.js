@@ -13,6 +13,15 @@ const errorCheck = {
       return false;
     }
   },
+  checkForFloat: function(buffer, index) {
+    if (buffer && index) {
+     if (!(Number.isInteger(buffer[index + 1]))) {
+       return "Math ERROR";
+      } else {
+        return false;
+      }
+   }
+  },
   checkForNaN: function(buffer) {
     if (typeof(buffer) !== "string" && isNaN(buffer)) {
       return "Syntax ERROR";
