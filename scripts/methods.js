@@ -158,6 +158,8 @@ function operate() {
   }
 
   // Check for errors, and output either an error message or the numeric result.
+  buffer[0] = Number(buffer[0]);
+
   if (errorCheck.checkForNaN(buffer[0])) {
     display.textContent = errorCheck.checkForNaN(buffer[0]);
   }
@@ -165,7 +167,7 @@ function operate() {
     display.textContent = errorCheck.checkForInfinity(buffer, 0);
   } else {
     if (String(buffer[0]).length > 14) {
-      display.textContent = Number(buffer[0]).toPrecision(14);
+      display.textContent = buffer[0].toPrecision(14);
     } else {
       display.textContent = buffer[0];
     }
