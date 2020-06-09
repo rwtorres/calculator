@@ -8,8 +8,8 @@ body {
   position: absolute;
   display: flex;
   z-index: 1;
-  width: 99vw;
-  height: 99vw;
+  width: 97vw;
+  height: 90vh;
   align-content: center;
   justify-content: center;
   background-color: #414141;
@@ -31,6 +31,7 @@ body {
 }
 
 #calculator-container {
+  touch-action: manipulation;
   position: absolute;
   display: flex;
   align-self: center;
@@ -42,6 +43,7 @@ body {
 }
 
 #screen {
+  touch-action: manipulation;
   display: flex;
   height: 25%;
   width: 100%;
@@ -61,6 +63,7 @@ body {
 }
 
 #buttons-container {
+  touch-action: manipulation;
   background-color: #555555;
   display: flex;
   flex-flow: column;
