@@ -74,6 +74,7 @@ function deleteChar() {
 function operate() {
   const buffer = [];
 
+  // Organize display elements into buffer elements.
   for (let i = 0, j = 0; j < display.textContent.length; j++) {
     if (typeof(buffer[i]) !== "string") buffer[i] = "";
     if (!(contentCheck.isOperator(display.textContent[j])) &&
@@ -111,6 +112,8 @@ function operate() {
       j += 2;
     }
   }
+
+  // Calculate first the operations with higher precedence
   for (let i = 0; i < buffer.length; i++) {
     if (buffer[i] === "×") {
       buffer[i] = Number(buffer[i-1]) * Number(buffer[i+1]);
@@ -132,9 +135,11 @@ function operate() {
         buffer.splice(i+1, 1);
         buffer.splice(i-1, 1);
         i = 0;
+      }
     }
   }
-}
+
+  // then the ones with lower precedence.
   for (let i = 0; i < buffer.length; i++) {
     if (buffer[i] === "+" || buffer[i] === "-") {
       if (buffer[i] === "+") {
@@ -148,6 +153,7 @@ function operate() {
     }
   }
 
+  // Check for errors, and output either an error message or the numeric result.
   if (errorCheck.checkForNaN(buffer[0])) {
     display.textContent = errorCheck.checkForNaN(buffer[0]);
   }
