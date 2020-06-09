@@ -1,3 +1,4 @@
-## Super Simple Calculator
+## Simple Calculator
 
-A simple web calculator.
+![Simple Calculator](images/preview.png)
+A simple calculator for the web, shown as a floating popup.
