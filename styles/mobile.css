@@ -47,7 +47,7 @@ body {
   align-self: center;
   justify-self: center;
   justify-content: flex-end;
-  font-size: 2em;
+  font-size: 5em;
   border: 0.2% solid #555555;
   background-color: #222;
 /*  margin-bottom: 3%; */
@@ -81,7 +81,7 @@ body {
   color: white;
   border: 0.09em solid #555555;
   flex: 25%;
-  font-size: 1em;
+  font-size: 3em;
   font-family: sans-serif;
 }
 
