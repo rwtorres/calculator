@@ -15,7 +15,7 @@ const errorCheck = {
   },
   checkForFloat: function(buffer, index) {
     if (buffer && index) {
-     if (!(Number.isInteger(buffer[index + 1]))) {
+     if (!(Number.isInteger(Number(buffer[index + 1])))) {
        return "Math ERROR";
       } else {
         return false;
