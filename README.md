@@ -1,6 +1,6 @@
-## Web Calculator
+## Calculator
 
-![Web Calculator](images/preview.png)
+![Calculator Preview](images/preview.png)
 
 A simple calculator for the web, shown as a floating popup on desktop, and as a
 full page calculator on mobile.
