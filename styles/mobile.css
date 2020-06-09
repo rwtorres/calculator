@@ -1,8 +1,5 @@
 body {
-  touch-action: pan-x;
-  touch-action: pan-y;
-  touch-action: pinch-zoom;
-/*  touch-action: manipulation;*/
+  touch-action: manipulation;
   overflow: hidden;
   z-index: 0;
   background-color: #222;
@@ -80,6 +77,7 @@ body {
 }
 
 .button {
+  touch-action: manipulation;
   flex: 1;
   background-color: #414141;
   color: white;
@@ -89,7 +87,7 @@ body {
   font-family: sans-serif;
 }
 
-.button:hover, .button:focus {
+.button:hover, .button:focus, button:active {
   background-color: #515151;
   outline: none;
 }
