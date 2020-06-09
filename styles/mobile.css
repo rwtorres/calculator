@@ -1,4 +1,5 @@
 body {
+  touch-action: manipulation;
   overflow: hidden;
   z-index: 0;
   background-color: #222;
@@ -7,8 +8,8 @@ body {
   position: absolute;
   display: flex;
   z-index: 1;
-  width: 96vw;
-  height: 96vw;
+  width: 99vw;
+  height: 99vw;
   align-content: center;
   justify-content: center;
   background-color: #414141;
