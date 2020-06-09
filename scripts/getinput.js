@@ -1,3 +1,5 @@
+getInput();
+
 // Check for user input on numbers, dots and operations.
 function getInput() {
   // Check for Number input, either by keyboard or by button click.
